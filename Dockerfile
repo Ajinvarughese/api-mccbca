@@ -1,8 +1,4 @@
-FROM maven:3-eclipse-temurin-17 AS build
-COPY . .
-RUN mvn clean package -DskipTests
-
-FROM eclipse-temurin:17-alphine
-COPY --from=build /target/*.jar demo.jar
+FROM openjdk:23
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "demo.jar"]
+ADD target/mccbca.jar mccbca.jar
+ENTRYPOINT ["java","-jar","/mccbca.jar"]
