@@ -13,7 +13,7 @@ public class Config {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://mccbca.netlify.app")
+                        .allowedOrigins("https://mccbca.netlify.app/")
                         .allowedMethods("POST", "PATCH", "DELETE", "GET");
             }
         };
