@@ -10,12 +10,9 @@ import java.util.List;
 
 @Service
 public class GalleryService {
-    private final GalleryRepository repository;
 
     @Autowired
-    public GalleryService(GalleryRepository repository) {
-        this.repository = repository;
-    }
+    GalleryRepository repository;
 
     public Gallery upload(Gallery gallery) {
         Gallery newUpload = new Gallery(gallery.getUrl(), DateAndTime.currentDateTime());

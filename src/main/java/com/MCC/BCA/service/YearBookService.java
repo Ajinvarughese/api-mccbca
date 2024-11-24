@@ -9,12 +9,9 @@ import java.util.List;
 
 @Service
 public class YearBookService {
-    private final YearBookRepository repository;
 
     @Autowired
-    public YearBookService(YearBookRepository repository) {
-        this.repository = repository;
-    }
+    YearBookRepository repository;
     public YearBook createYearBook(YearBook yearBook) {
         return repository.save(yearBook);
     }
