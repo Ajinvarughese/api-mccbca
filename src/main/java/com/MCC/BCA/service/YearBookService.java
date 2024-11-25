@@ -16,7 +16,7 @@ public class YearBookService {
         return repository.save(yearBook);
     }
     public List<YearBook> showAllYearBook() {
-        return repository.findByStatus();
+        return repository.findByStatus().reversed();
     }
 
     public List<YearBook> showAllYearBookAdmin() {

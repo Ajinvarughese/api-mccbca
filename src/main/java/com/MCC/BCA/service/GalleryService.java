@@ -20,7 +20,7 @@ public class GalleryService {
     }
 
     public List<Gallery> showAllImages() {
-        return repository.findAll();
+        return repository.findAll().reversed();
     }
     public void deleteImgById(Long id) {
         repository.deleteById(id);
